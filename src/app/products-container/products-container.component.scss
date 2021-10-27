@@ -1,0 +1,25 @@
+@use "sass:math";
+@import "../../scss/vars";
+@import "../../scss/mixins";
+.products-container {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  text-align: center;
+}
+@include lg {
+  .products-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@include md {
+  .products-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@include sm {
+  .products-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
