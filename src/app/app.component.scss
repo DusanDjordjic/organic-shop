@@ -77,6 +77,7 @@
     text-align: center;
     font-size: $font-size-xxl * 2;
     font-family: $font-secodary;
+    font-weight: normal;
     color: $color-text;
   }
   div {
@@ -125,6 +126,110 @@
     }
     p {
       color: $color-gray;
+    }
+  }
+}
+.about-us-section {
+  margin: 100px 0;
+  #bl {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+  }
+  #bl2-1 {
+    padding: $base-padding;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    transform: rotate(-30deg);
+  }
+  #bl2-2 {
+    padding: $base-padding;
+    width: 300px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: rotate(30deg);
+  }
+  .about-us-box {
+    position: relative;
+    background-color: $color-secondary;
+    padding: $base-padding * 3;
+    padding-bottom: $base-padding * 15;
+    h3 {
+      text-align: center;
+      font-size: $font-size-xl;
+      margin-bottom: $base-margin * 2;
+    }
+    .boxes-grid {
+      width: 80%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      .box {
+        padding: $base-padding * 2;
+        h4 {
+          font-family: $font-secodary;
+          font-size: $font-size-xl * 0.8;
+          font-weight: normal;
+        }
+      }
+      .box-left {
+        text-align: right;
+      }
+      #first-box {
+        border-bottom: dotted 3px $color-dark;
+        border-right: dotted 3px $color-dark;
+      }
+      #second-box {
+        border-bottom: dotted 3px $color-dark;
+      }
+      #third-box {
+        border-right: dotted 3px $color-dark;
+      }
+    }
+  }
+}
+.details-section {
+  margin: 100px 0;
+
+  .details-container {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 100px;
+    .details-links {
+      list-style: none;
+      border-right: 2px solid $color-dark;
+      li {
+        cursor: pointer;
+        button {
+          cursor: pointer;
+          display: inline-block;
+          margin: 20px 50px;
+          padding: 10px 30px;
+          border-radius: $base-border-radius * 10;
+          border: 0;
+          background-color: transparent;
+          font-size: $font-size-lg;
+          font-family: $font-secodary;
+          transition: all 0.3s;
+        }
+        i {
+          transition: all 0.3s;
+        }
+        &.active {
+          button {
+            background-color: $color-main;
+            color: $color-text;
+          }
+          i {
+            color: $color-main;
+          }
+        }
+      }
     }
   }
 }

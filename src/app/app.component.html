@@ -34,3 +34,67 @@
     <app-products-container></app-products-container>
   </div>
 </section>
+<section class="about-us-section">
+  <div class="container">
+    <div class="about-us-box">
+      <img src="../assets/leaves-b.png" alt="black-leaves" id="bl" />
+      <img src="../assets/leaves2-b.png" alt="black-leaves" id="bl2-1" />
+      <img src="../assets/leaves2-b.png" alt="black-leaves" id="bl2-2" />
+      <h3>Zašto Izabrati Nas</h3>
+      <div class="boxes-grid">
+        <div class="box box-left" id="first-box">
+          <h4>100% Prirodno</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nihil
+            tempore optio cupiditate perspiciatis molestiae dolore fugit quidem
+            itaque? Facilis!
+          </p>
+        </div>
+        <div class="box box-right" id="second-box">
+          <h4>100% Uvek Sveže</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nihil
+            tempore optio cupiditate perspiciatis molestiae dolore fugit quidem
+            itaque? Facilis!
+          </p>
+        </div>
+        <div class="box box-left" id="third-box">
+          <h4>Premium Kvalitet</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nihil
+            tempore optio cupiditate perspiciatis molestiae dolore fugit quidem
+            itaque? Facilis!
+          </p>
+        </div>
+        <div class="box box-right">
+          <h4>Veoma Zdravo</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nihil
+            tempore optio cupiditate perspiciatis molestiae dolore fugit quidem
+            itaque? Facilis!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="details-section">
+  <div class="container">
+    <div class="details-container">
+      <ul class="details-links">
+        <li
+          *ngFor="let product of prodctsArray"
+          (click)="setActiveDetail(product.name)"
+          [ngClass]="activeProduct.name === product.name ? 'active' : ''"
+        >
+          <i class="fas fa-leaf"></i>
+          <button href="/">{{ product.name }}</button>
+        </li>
+      </ul>
+      <div>
+        <h3>{{ activeProduct.name }}</h3>
+        <p>{{ activeProduct.text }}</p>
+      </div>
+    </div>
+  </div>
+</section>
