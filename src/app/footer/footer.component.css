@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600&display=swap");
+@use "sass:math";
+.big-grid {
+  display: -ms-grid;
+  display: grid;
+  margin-bottom: 50px;
+  -ms-grid-columns: 350px 1fr;
+      grid-template-columns: 350px 1fr;
+  gap: 50px;
+}
+
+.big-grid .footer-image {
+  background-image: url("../../assets/banner.png");
+  background-size: cover;
+  background-position: center;
+  padding: 1em;
+  text-align: center;
+  color: #fff;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 70%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 70%, 0 100%);
+}
+
+.big-grid .footer-image h4 {
+  margin-bottom: 1em;
+}
+
+.big-grid .details-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+}
+
+.big-grid .details-grid p {
+  font-family: "Pacifico", cursive;
+  font-size: 1.6em;
+}
+
+.big-grid .details-grid a {
+  margin: 1em 0;
+  display: block;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.big-grid .details-grid a:last-of-type {
+  margin-bottom: 0;
+}
+
+.big-grid .details-grid a:hover {
+  color: #5eb485;
+  text-decoration: underline;
+}
+
+.big-grid hr {
+  margin: 2em 0;
+}
+
+.big-grid .contact-details p {
+  font-family: "Pacifico", cursive;
+  font-size: 1.6em;
+}
+
+.big-grid .contact-details ul {
+  list-style: none;
+}
+
+.big-grid .contact-details ul li {
+  margin: 1em 0;
+}
+
+.big-grid .contact-details ul li i {
+  padding: 10px;
+  border-radius: 10em;
+  background-color: #5eb485;
+  color: #fff;
+  margin-right: 1em;
+}
+
+@media only screen and (max-width: 1200px) {
+  .big-grid .details-grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .big-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .big-grid .footer-image {
+    display: none;
+  }
+  .big-grid .details-grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .big-grid .details-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+/*# sourceMappingURL=footer.component.css.map */

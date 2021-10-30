@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,qGAAI;ADAZ,IAAI,CAAJ,WAAI;AAGJ,AAAA,IAAI,CAAC;EACH,UAAU,EAAE,IAAI;EAChB,aAAa,EAAE,KAAK;CACrB;;AACD,AAAA,UAAU,CAAC;EACT,MAAM,EAAE,KAAK;EACb,gBAAgB,EAAE,+BAA+B;EACjD,iBAAiB,EAAE,MAAM;CAE1B",
+    "sources": [
+        "products-page.component.scss",
+        "../../scss/_vars.scss",
+        "../../scss/_mixins.scss"
+    ],
+    "names": [],
+    "file": "products-page.component.css"
+}

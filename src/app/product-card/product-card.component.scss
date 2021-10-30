@@ -40,14 +40,14 @@
     padding: $base-padding;
     h4 {
       margin-top: 0;
-      margin-bottom: math.div($base-margin, 2);
+      margin-bottom: $base-margin * 0.5;
       font-size: $font-size-lg;
     }
     a {
       margin-top: $base-margin * 2;
       display: inline-block;
       border-radius: $base-border-radius * 10;
-      padding: math.div($base-padding, 2) $base-padding;
+      padding: $base-padding * 0.5 $base-padding;
       background-color: $color-background;
       color: $color-main;
     }

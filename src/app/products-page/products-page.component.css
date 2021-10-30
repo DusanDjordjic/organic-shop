@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600&display=swap");
+@use "sass:math";
+main {
+  margin-top: 89px;
+  margin-bottom: 100px;
+}
+
+.delimiter {
+  height: 100px;
+  background-image: url("../../assets/pattern.png");
+  background-repeat: repeat;
+}
+/*# sourceMappingURL=products-page.component.css.map */

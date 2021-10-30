@@ -67,7 +67,7 @@ nav {
       color: $color-dark;
       display: inline-block;
       border: none;
-      padding: math.div($base-padding, 2);
+      padding: $base-padding * 0.5;
       border-bottom: 2px solid transparent;
       transition: all 0.3s;
       &:focus {

@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600&display=swap");
+@use "sass:math";
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #fff;
+  color: #1c1c1c;
+  padding: 30px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 1px 2px 18px -10px black;
+          box-shadow: 1px 2px 18px -10px black;
+}
+
+nav .toggleBtn {
+  margin: 5px 0 0 5px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  font-size: 1.2em;
+  color: #5eb485;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0;
+  background-color: rgba(94, 180, 133, 0.3);
+  border-radius: 10em;
+  display: none;
+  -webkit-box-shadow: 1px 2px 18px -10px black;
+          box-shadow: 1px 2px 18px -10px black;
+}
+
+nav .toggleBtn i {
+  display: block;
+}
+
+nav ul {
+  font-size: 1.2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-right: 30px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+nav ul li a {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+nav ul li a.active {
+  color: #5eb485;
+  text-decoration: underline;
+}
+
+nav ul li a:hover {
+  color: #5eb485;
+}
+
+nav form {
+  font-size: 1.2em;
+  color: #9a9a9a;
+}
+
+nav form i {
+  margin-right: 10px;
+}
+
+nav form input {
+  max-width: 200px;
+  font-size: 1.2em;
+  color: #1c1c1c;
+  display: inline-block;
+  border: none;
+  padding: 0.5em;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+nav form input:focus {
+  outline: none;
+  border-color: #5eb485;
+}
+
+@media only screen and (max-width: 992px) {
+  nav .toggleBtn {
+    display: inline-block;
+  }
+  nav ul {
+    position: absolute;
+    padding: 0 50px;
+    max-height: 0;
+    overflow: hidden;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background-color: #fff;
+    font-size: 1.2em;
+    display: block;
+    list-style: none;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+  }
+  nav ul.active {
+    max-height: 200px;
+  }
+  nav ul li {
+    margin: 1em 0;
+  }
+}
+/*# sourceMappingURL=nav.component.css.map */

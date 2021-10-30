@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600&display=swap");
+@use "sass:math";
+.my {
+  margin: 100px auto;
+}
+
+.product-card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 3fr;
+      grid-template-columns: 2fr 3fr;
+  gap: 50px;
+}
+
+.product-card .image-col {
+  position: relative;
+}
+
+.product-card .image-col .image-wrapper {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 139px;
+  padding: 150px 50px;
+  border-radius: 1em;
+  background-color: rgba(94, 180, 133, 0.3);
+  -webkit-box-shadow: 1px 2px 18px -10px black;
+          box-shadow: 1px 2px 18px -10px black;
+}
+
+.product-card .image-col img {
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 992px) {
+  .product-card {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+/*# sourceMappingURL=product-card-big.component.css.map */

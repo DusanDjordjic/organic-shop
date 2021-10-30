@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600&display=swap");
+@use "sass:math";
+.product-card {
+  position: relative;
+  padding: 2em 1em;
+  overflow: hidden;
+  border: 1px solid #cdcdcd;
+  border-radius: 1em;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-card h4 {
+  margin-top: 2em;
+}
+
+.product-card span {
+  margin-top: 1em;
+  display: inline-block;
+  color: #5eb485;
+}
+
+.product-card:hover {
+  border-color: #5eb485;
+  -webkit-box-shadow: 2px 3px 18px -10px black;
+          box-shadow: 2px 3px 18px -10px black;
+}
+
+.product-card:hover .overlay {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+.product-card .overlay {
+  -webkit-transform: translateY(110%);
+          transform: translateY(110%);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: absolute;
+  background-color: #5eb485;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: #fff;
+  padding: 1em;
+}
+
+.product-card .overlay h4 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+}
+
+.product-card .overlay a {
+  margin-top: 2em;
+  display: inline-block;
+  border-radius: 10em;
+  padding: 0.5em 1em;
+  background-color: #fff;
+  color: #5eb485;
+}
+/*# sourceMappingURL=product-card.component.css.map */

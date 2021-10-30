@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,qGAAI;ADAZ,IAAI,CAAJ,WAAI;AAGJ,AAAA,mBAAmB,CAAC;EAClB,UAAU,EAAE,KAAK;EACjB,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,cAAc;EACrC,GAAG,EAAE,IAAI;EACT,UAAU,EAAE,MAAM;CACnB;;AERC,MAAM,MAAM,MAAM,MAAM,SAAS,EAAE,MAAM;EFUzC,AAAA,mBAAmB,CAAC;IAClB,qBAAqB,EAAE,cAAc;GACtC;;;AEPD,MAAM,MAAM,MAAM,MAAM,SAAS,EAAE,KAAK;EFUxC,AAAA,mBAAmB,CAAC;IAClB,qBAAqB,EAAE,cAAc;GACtC;;;AEDD,MAAM,MAAM,MAAM,MAAM,SAAS,EAAE,KAAK;EFIxC,AAAA,mBAAmB,CAAC;IAClB,qBAAqB,EAAE,cAAc;GACtC",
+    "sources": [
+        "products-container.component.scss",
+        "../../scss/_vars.scss",
+        "../../scss/_mixins.scss"
+    ],
+    "names": [],
+    "file": "products-container.component.css"
+}
