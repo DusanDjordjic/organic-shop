@@ -1,0 +1,104 @@
+<div class="hero-section">
+  <div class="container">
+    <h1>Prirodni Čajevi</h1>
+    <div class="center">
+      <span>100% Srpski</span>
+    </div>
+    <!-- <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati itaque
+      esse iusto perspiciatis? Corporis nostrum quos iusto et, assumenda
+      voluptatem iure sequi vero molestiae, repellendus in animi laboriosam.
+      Obcaecati inventore illum accusantium sed reiciendis! Doloremque molestiae
+      illum ipsa tempora aliquam.
+    </p> -->
+  </div>
+</div>
+<section class="product-section">
+  <div class="container">
+    <h2>Naši Proizvodi</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, commodi.
+    </p>
+    <app-products-container></app-products-container>
+  </div>
+</section>
+<section class="about-us-section">
+  <div class="about-us-box">
+    <img src="../assets/leaves-b.png" alt="black-leaves" id="bl" />
+
+    <div class="container">
+      <h3>Zašto Izabrati Nas</h3>
+      <div class="boxes-grid">
+        <div class="box box-left" id="first-box">
+          <h4>100% Prirodno</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nihil
+            tempore optio cupiditate perspiciatis molestiae dolore fugit quidem
+            itaque? Facilis!
+          </p>
+        </div>
+        <div class="box box-right" id="second-box">
+          <h4>Uvek Sveže</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nihil
+            tempore optio cupiditate perspiciatis molestiae dolore fugit quidem
+            itaque? Facilis!
+          </p>
+        </div>
+        <div class="box box-left" id="third-box">
+          <h4>Premium Kvalitet</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nihil
+            tempore optio cupiditate perspiciatis molestiae dolore fugit quidem
+            itaque? Facilis!
+          </p>
+        </div>
+        <div class="box box-right">
+          <h4>Veoma Zdravo</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nihil
+            tempore optio cupiditate perspiciatis molestiae dolore fugit quidem
+            itaque? Facilis!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="details-section">
+  <div class="container">
+    <div class="details-container">
+      <div class="details-links-wrapper" #sidebar>
+        <ul class="details-links">
+          <button (click)="deactivateElement(sidebar)" class="closeBtn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <li
+            *ngFor="let product of prodctsArray"
+            (click)="setActiveDetail(product.name)"
+            [ngClass]="activeProduct.name === product.name ? 'active' : ''"
+          >
+            <i class="fas fa-leaf"></i>
+            <button>{{ product.name }}</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="details-desc">
+        <button (click)="toggleSidebar(sidebar)" class="toggleBtn">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        <markdown [data]="activeProduct.desc"></markdown>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="quote-section">
+  <div class="container center">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+      labore provident possimus quos tempora magnam quis veritatis? Quam, hic.
+      Sed ratione quam labore ea ut.
+    </p>
+  </div>
+</section>

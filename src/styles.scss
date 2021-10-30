@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./scss/mixins";
 @import "./scss/vars";
 * {
   margin: 0;
@@ -16,4 +17,30 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.justify-text {
+  text-align: justify;
+}
+.desc-h2 {
+  font-family: $font-secodary;
+  font-size: $font-size-xxl;
+  font-weight: normal;
+  margin: $base-margin 0;
+}
+.desc-h3 {
+  font-family: $font-secodary;
+  font-size: $font-size-xl;
+  font-weight: normal;
+  margin: $base-margin 0;
+}
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 $base-padding * 2;
+}
+
+@include sm {
+  body {
+    font-size: 14px;
+  }
 }

@@ -1,0 +1,89 @@
+@use "sass:math";
+@import "../../scss/vars";
+@import "../../scss/mixins";
+.big-grid {
+  display: grid;
+  margin-bottom: 50px;
+  grid-template-columns: 350px 1fr;
+  gap: 50px;
+  .footer-image {
+    background-image: url("../../assets/banner.png");
+    background-size: cover;
+    background-position: center;
+    padding: $base-padding;
+    text-align: center;
+    color: $color-text;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 70%, 0 100%);
+    h4 {
+      margin-bottom: $base-margin;
+    }
+  }
+  .details-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    p {
+      font-family: $font-secodary;
+      font-size: $font-size-xl * 0.8;
+    }
+    a {
+      margin: $base-margin 0;
+      display: block;
+      transition: all 0.3s;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      &:hover {
+        color: $color-main;
+        text-decoration: underline;
+      }
+    }
+  }
+  hr {
+    margin: $base-margin * 2 0;
+  }
+  .contact-details {
+    p {
+      font-family: $font-secodary;
+      font-size: $font-size-xl * 0.8;
+    }
+    ul {
+      list-style: none;
+      li {
+        i {
+          padding: 10px;
+          border-radius: $base-border-radius * 10;
+          background-color: $color-main;
+          color: $color-text;
+          margin-right: $base-margin;
+        }
+        margin: $base-margin 0;
+      }
+    }
+  }
+}
+@include lg {
+  .big-grid {
+    .details-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@include md {
+  .big-grid {
+    .footer-image {
+      display: none;
+    }
+    grid-template-columns: 1fr;
+    .details-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@include xs {
+  .big-grid {
+    .details-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

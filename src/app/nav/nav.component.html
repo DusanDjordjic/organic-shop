@@ -1,0 +1,24 @@
+<nav>
+  <button class="toggleBtn" (click)="toggleNav()">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <ul #links>
+    <li>
+      <a
+        routerLink=""
+        [routerLinkActive]="'active'"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Početna</a
+      >
+    </li>
+    <li><a routerLink="">O nama</a></li>
+    <li>
+      <a routerLink="/products" [routerLinkActive]="'active'">Proizvodi</a>
+    </li>
+  </ul>
+  <!-- <form (submit)="onSearchSubmit()">
+      <input type="text" placeholder="Search..." [(ngModel)]="searchQuery" />
+      <i class="fas fa-search"></i>
+    </form> -->
+</nav>

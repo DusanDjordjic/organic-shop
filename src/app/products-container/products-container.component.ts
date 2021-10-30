@@ -8,9 +8,9 @@ import { ProductService } from '../services/product.service';
 })
 export class ProductsContainerComponent implements OnInit {
   productsArray: ProductInterface[] = [];
-  constructor(private productService: ProductService) {
-    this.productsArray = productService.getProducts();
-  }
+  constructor(private productService: ProductService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.productsArray = this.productService.getProducts();
+  }
 }

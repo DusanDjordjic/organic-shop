@@ -1,0 +1,108 @@
+@use "sass:math";
+@import "../../scss/vars";
+@import "../../scss/mixins";
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: $color-background;
+  color: $color-dark;
+  padding: 30px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1px 2px 18px -10px rgba($color: #000000, $alpha: 1);
+  .toggleBtn {
+    margin: 5px 0 0 5px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    font-size: $font-size-lg;
+    color: $color-main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    background-color: rgba($color-main, 0.3);
+    border-radius: $base-border-radius * 10;
+    display: none;
+    box-shadow: 1px 2px 18px -10px rgba($color: #000000, $alpha: 1);
+    i {
+      display: block;
+    }
+  }
+
+  ul {
+    font-size: $font-size-lg;
+    display: flex;
+    list-style: none;
+    li {
+      margin-right: 30px;
+      transition: all 0.3s;
+      a {
+        transition: all 0.3s;
+        &.active {
+          color: $color-main;
+          text-decoration: underline;
+        }
+        &:hover {
+          color: $color-main;
+        }
+      }
+    }
+  }
+
+  form {
+    font-size: $font-size-lg;
+    color: $color-gray;
+    i {
+      margin-right: 10px;
+    }
+    input {
+      max-width: 200px;
+      font-size: $font-size-lg;
+      color: $color-dark;
+      display: inline-block;
+      border: none;
+      padding: math.div($base-padding, 2);
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s;
+      &:focus {
+        outline: none;
+        border-color: $color-main;
+      }
+    }
+  }
+}
+
+@include md {
+  nav {
+    .toggleBtn {
+      display: inline-block;
+    }
+    ul {
+      position: absolute;
+
+      padding: 0 50px;
+      max-height: 0;
+      overflow: hidden;
+      left: 0;
+      top: 100%;
+      width: 100%;
+      background-color: $color-background;
+      font-size: $font-size-lg;
+      display: block;
+      list-style: none;
+      transition: all 0.3s ease-in;
+      &.active {
+        max-height: 200px;
+      }
+      li {
+        margin: $base-margin 0;
+      }
+    }
+  }
+}

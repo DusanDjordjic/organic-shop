@@ -1,0 +1,13 @@
+@use "sass:math";
+@import "../../scss/vars";
+@import "../../scss/mixins";
+main {
+  margin-top: 89px;
+  margin-bottom: 100px;
+}
+.delimiter {
+  height: 100px;
+  background-image: url("../../assets/pattern.png");
+  background-repeat: repeat;
+  // background-color: rgba($color-main, 0.1);
+}

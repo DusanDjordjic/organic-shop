@@ -1,0 +1,16 @@
+<div class="container my">
+  <div class="product-card">
+    <div class="image-col">
+      <div class="image-wrapper">
+        <img [src]="product.picture" [alt]="product.name" />
+      </div>
+    </div>
+    <div class="text-wrapper">
+      <markdown [data]="product.desc"></markdown>
+      <div class="buy-box">
+        <span>{{ product.price }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-content> </ng-content>
