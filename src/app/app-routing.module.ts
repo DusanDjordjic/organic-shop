@@ -13,7 +13,9 @@ const appRoutes: Routes = [
   { path: 'products/:id', component: SingleProductPageComponent },
 ];
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes)],
+  imports: [
+    RouterModule.forRoot(appRoutes, { scrollPositionRestoration: 'enabled' }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

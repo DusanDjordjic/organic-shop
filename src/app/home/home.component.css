@@ -294,6 +294,10 @@
   .details-section .details-container .details-links-wrapper .closeBtn {
     display: inline-block;
   }
+  .details-section .details-container .details-links-wrapper .details-links {
+    position: relative;
+    top: 0;
+  }
   .details-section .details-container .details-desc .toggleBtn {
     display: inline-block;
   }

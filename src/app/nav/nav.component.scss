@@ -80,13 +80,14 @@ nav {
 
 @include md {
   nav {
+    padding: 30px;
     .toggleBtn {
       display: inline-block;
     }
     ul {
       position: absolute;
 
-      padding: 0 50px;
+      padding: 0 30px;
       max-height: 0;
       overflow: hidden;
       left: 0;

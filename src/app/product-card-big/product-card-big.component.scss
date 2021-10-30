@@ -25,6 +25,9 @@
   }
 }
 @include md {
+  .my {
+    margin: 163px auto;
+  }
   .product-card {
     grid-template-columns: 1fr;
   }

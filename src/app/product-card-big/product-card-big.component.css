@@ -33,6 +33,9 @@
 }
 
 @media only screen and (max-width: 992px) {
+  .my {
+    margin: 163px auto;
+  }
   .product-card {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
