@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MarkdownService } from 'ngx-markdown';
 import { ProductInterface } from '../Interfaces/product.interface';
+import { CartSerice } from '../services/cart.service';
 
 @Component({
   selector: 'app-product-card-big',
@@ -9,7 +10,12 @@ import { ProductInterface } from '../Interfaces/product.interface';
 })
 export class ProductCardBigComponent implements OnInit {
   @Input('product') product!: ProductInterface;
-  constructor(private markdownService: MarkdownService) {}
+  count: number = 1;
+
+  constructor(
+    private markdownService: MarkdownService,
+    private cartService: CartSerice
+  ) {}
 
   ngOnInit(): void {
     this.markdownService.renderer.heading = (text: string, level: number) => {
@@ -18,5 +24,16 @@ export class ProductCardBigComponent implements OnInit {
     this.markdownService.renderer.paragraph = (text: string) => {
       return `<p class="justify-text">${text}</p>`;
     };
+  }
+  changeCount(step: number) {
+    if (this.count + step >= 1) {
+      this.count += step;
+    }
+  }
+  onAddToCart() {
+    this.cartService.addToCard(this.count, this.product.id);
+    this.count = 1;
+    
+    alert(`Dodano ${this.count} ${this.product.name}`);
   }
 }

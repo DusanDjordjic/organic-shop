@@ -15,6 +15,7 @@ import { markedOptionsFactory } from './markdown/markedOptionsFactory';
 import { FooterComponent } from './footer/footer.component';
 import { NavComponent } from './nav/nav.component';
 import { ProductCardBigComponent } from './product-card-big/product-card-big.component';
+import { CartSerice } from './services/cart.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { ProductCardBigComponent } from './product-card-big/product-card-big.com
     AppRoutingModule,
     MarkdownModule.forRoot(),
   ],
-  providers: [ProductService, MarkdownService],
+  providers: [ProductService, MarkdownService, CartSerice],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

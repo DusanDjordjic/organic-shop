@@ -1,8 +1,28 @@
 <div class="container my">
   <div class="product-card">
     <div class="image-col">
-      <div class="image-wrapper">
-        <img [src]="product.picture" [alt]="product.name" />
+      <div class="image-col-wrapper">
+        <div class="image-wrapper">
+          <img [src]="product.picture" [alt]="product.name" />
+        </div>
+        <div class="controls-wrapper">
+          <div>
+            <span (click)="changeCount(-1)" class="btn"
+              ><i class="fas fa-minus"></i
+            ></span>
+            <span class="btn count">
+              {{ count }}
+            </span>
+            <span (click)="changeCount(1)" class="btn"
+              ><i class="fas fa-plus"></i
+            ></span>
+          </div>
+          <div>
+            <button class="btn-checkout" (click)="onAddToCart()">
+              <i class="fas fa-shopping-bag"></i> Dodaj u korpu
+            </button>
+          </div>
+        </div>
       </div>
     </div>
     <div class="text-wrapper">

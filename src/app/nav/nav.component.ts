@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { CartSerice } from '../services/cart.service';
 
 @Component({
   selector: 'app-nav',
@@ -8,9 +9,12 @@ import { Router } from '@angular/router';
 })
 export class NavComponent implements OnInit, AfterViewInit {
   @ViewChild('links') links!: any;
-  constructor(private router: Router) {}
+  cartCount: number = 0;
+  constructor(private router: Router, private cart: CartSerice) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.cart.countSubject.subscribe((data) => (this.cartCount = data));
+  }
   ngAfterViewInit() {
     this.router.events.subscribe(() => {
       this.links.nativeElement.classList.remove('active');

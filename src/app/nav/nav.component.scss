@@ -54,7 +54,26 @@ nav {
       }
     }
   }
-
+  .shopping-bag {
+    font-size: $font-size-lg;
+    position: relative;
+    .shopping-bag-count {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: $color-main;
+      color: $color-text;
+      width: 20px;
+      height: 20px;
+      transform: translate(50%, 50%);
+      border-radius: $base-border-radius * 10;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: $font-size-normal * 0.8;
+      font-weight: 700;
+    }
+  }
   form {
     font-size: $font-size-lg;
     color: $color-gray;

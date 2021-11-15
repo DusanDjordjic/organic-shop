@@ -17,6 +17,12 @@
       <a routerLink="/products" [routerLinkActive]="'active'">Proizvodi</a>
     </li>
   </ul>
+  <a routerLink="bag" class="shopping-bag"
+    ><i class="fas fa-shopping-bag"></i
+    ><span *ngIf="cartCount !== 0" class="shopping-bag-count">{{
+      cartCount
+    }}</span>
+  </a>
   <!-- <form (submit)="onSearchSubmit()">
       <input type="text" placeholder="Search..." [(ngModel)]="searchQuery" />
       <i class="fas fa-search"></i>
