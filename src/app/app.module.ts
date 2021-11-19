@@ -11,11 +11,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { ProductsPageComponent } from './products-page/products-page.component';
 import { SingleProductPageComponent } from './single-product-page/single-product-page.component';
 import { MarkdownModule, MarkdownService, MarkedOptions } from 'ngx-markdown';
-import { markedOptionsFactory } from './markdown/markedOptionsFactory';
+
 import { FooterComponent } from './footer/footer.component';
 import { NavComponent } from './nav/nav.component';
 import { ProductCardBigComponent } from './product-card-big/product-card-big.component';
-import { CartSerice } from './services/cart.service';
+import { CartService } from './services/cart.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -34,8 +35,9 @@ import { CartSerice } from './services/cart.service';
     FormsModule,
     AppRoutingModule,
     MarkdownModule.forRoot(),
+    HttpClientModule,
   ],
-  providers: [ProductService, MarkdownService, CartSerice],
+  providers: [ProductService, MarkdownService, CartService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

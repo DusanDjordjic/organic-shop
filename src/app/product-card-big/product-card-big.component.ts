@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MarkdownService } from 'ngx-markdown';
 import { ProductInterface } from '../Interfaces/product.interface';
-import { CartSerice } from '../services/cart.service';
+import { Product } from '../models/product.model';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-product-card-big',
@@ -9,12 +10,12 @@ import { CartSerice } from '../services/cart.service';
   styleUrls: ['./product-card-big.component.scss'],
 })
 export class ProductCardBigComponent implements OnInit {
-  @Input('product') product!: ProductInterface;
+  @Input('product') product: Product = new Product();
   count: number = 1;
 
   constructor(
     private markdownService: MarkdownService,
-    private cartService: CartSerice
+    private cartService: CartService
   ) {}
 
   ngOnInit(): void {
@@ -33,7 +34,7 @@ export class ProductCardBigComponent implements OnInit {
   onAddToCart() {
     this.cartService.addToCard(this.count, this.product.id);
     this.count = 1;
-    
+
     alert(`Dodano ${this.count} ${this.product.name}`);
   }
 }

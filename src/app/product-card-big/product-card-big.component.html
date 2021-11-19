@@ -3,7 +3,10 @@
     <div class="image-col">
       <div class="image-col-wrapper">
         <div class="image-wrapper">
-          <img [src]="product.picture" [alt]="product.name" />
+          <img
+            [src]="'assets/images/' + product.picture"
+            [alt]="product.name"
+          />
         </div>
         <div class="controls-wrapper">
           <div>

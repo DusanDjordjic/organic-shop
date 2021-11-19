@@ -1,8 +1,10 @@
 import { Subject } from 'rxjs';
 
-export class CartSerice {
+export class CartService {
   countSubject = new Subject<number>();
+  count: number = 0;
   cart: Array<{ count: number; productId: string }> = [];
+
   addToCard(count: number, id: string) {
     let notInCart = true;
     for (let i = 0; i < this.cart.length; i++) {
@@ -10,11 +12,14 @@ export class CartSerice {
       if (cartItem.productId === id) {
         notInCart = false;
         cartItem.count += count;
+        this.count += count;
       }
     }
     if (notInCart) {
       this.cart.push({ count: count, productId: id });
+      this.count += count;
     }
-    console.log(this.cart);
+
+    this.countSubject.next(this.count);
   }
 }

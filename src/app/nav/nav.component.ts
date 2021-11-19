@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { CartSerice } from '../services/cart.service';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-nav',
@@ -10,7 +10,7 @@ import { CartSerice } from '../services/cart.service';
 export class NavComponent implements OnInit, AfterViewInit {
   @ViewChild('links') links!: any;
   cartCount: number = 0;
-  constructor(private router: Router, private cart: CartSerice) {}
+  constructor(private router: Router, private cart: CartService) {}
 
   ngOnInit(): void {
     this.cart.countSubject.subscribe((data) => (this.cartCount = data));

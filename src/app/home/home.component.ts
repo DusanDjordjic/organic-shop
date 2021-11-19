@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MarkdownService } from 'ngx-markdown';
-import { ProductInterface } from '../Interfaces/product.interface';
+import { map } from 'rxjs/operators';
+
+import { Product } from '../models/product.model';
 import { ProductService } from '../services/product.service';
 
 @Component({
@@ -9,17 +11,22 @@ import { ProductService } from '../services/product.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  prodctsArray: ProductInterface[] = [];
+  productsArray: Product[] = [];
   searchQuery: string = '';
-  activeProduct: ProductInterface;
+  activeProduct: Product;
   @ViewChild('sidebar') sidebar!: any;
 
   constructor(
     private productService: ProductService,
     private markdownService: MarkdownService
   ) {
-    this.prodctsArray = productService.getProducts();
-    this.activeProduct = this.prodctsArray[0];
+    productService
+      .getProducts()
+      .pipe(map((data) => data.results))
+      .subscribe((data) => {
+        this.productsArray = data;
+      });
+    this.activeProduct = this.productsArray[0];
   }
   ngOnInit() {
     this.markdownService.renderer.heading = (text: string, level: number) => {
@@ -33,7 +40,7 @@ export class HomeComponent implements OnInit {
     console.log('serach submit');
   }
   setActiveDetail(name: string) {
-    this.activeProduct = this.prodctsArray.filter(
+    this.activeProduct = this.productsArray.filter(
       (product) => product.name === name
     )[0];
 
