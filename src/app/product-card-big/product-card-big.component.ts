@@ -32,9 +32,8 @@ export class ProductCardBigComponent implements OnInit {
     }
   }
   onAddToCart() {
-    this.cartService.addToCard(this.count, this.product.id);
-    this.count = 1;
-
+    this.cartService.addToCard(this.count, this.product);
     alert(`Dodano ${this.count} ${this.product.name}`);
+    this.count = 1;
   }
 }
